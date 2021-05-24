@@ -24,14 +24,9 @@ body {
 
 /* main */
 
-.female{
-  border-radius: 30px;
-}
-.male{
-  border-radius: 30px;
-}
+
 .main {
-  background-image: url("../images/background.jpg");
+  background-image: url("C:\Users\kthy7\github\indexbackground.jpg");
   background-size: cover;
   padding: 80px 0;
   min-height: calc(100vh - 66px);
@@ -47,32 +42,20 @@ body {
   padding: 32px 66px;
 }
 
-.container h2 {
-  font-size: 24px;
-  color: #4A4A4A;
-  margin: 0;
-  margin-bottom: 28px;
-}
 
-.container h2 span {
-  font-weight: 700;
-  color: #786FFF;
-}
-
-.container .img-row {
-  margin-bottom: 40px;
-}
-
-.container .img-row img {
-  vertical-align: middle;
-  margin: 0 6px;
-}
 
 .date-row {
   margin-bottom: 40px;
 }
 
 label[for=start] {
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 34.5px;
+  vertical-align: middle;
+  margin-right: 13px;
+}
+label[for=start1] {
   font-size: 16px;
   color: #4A4A4A;
   line-height: 34.5px;
@@ -87,8 +70,26 @@ input[type=date] {
   vertical-align: middle;
   font-size: 16px;
 }
+input[type=date1] {
+  border: 1px solid #786FFF;
+  border-radius: 5px;
+  padding: 8px 14px;
+  vertical-align: middle;
+  font-size: 16px;
+}
 
 #calculate {
+  width: 100%;
+  background: #786FFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  padding: 14px 0;
+  border: none;
+  cursor: pointer;
+}
+#calculate1 {
   width: 100%;
   background: #786FFF;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
