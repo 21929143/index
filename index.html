@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Couple Story</title>
+    <title>노담 캠페인</title>
     <meta charset="utf-8" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
   <body>
     <div class="navbar">
-      <img id="logo" src="images/logo.png" width="157">
+      <img id="logo" src="C:\Users\kthy7\github\no_smoking/1.jpg" width="157">
     </div>
 
     <div class="main">
       <div class="container">
-        <!-- 만난지 며칠? -->
-        <h2>만난지 <span id="day-count">00</span>일째</h2>
+        <!-- 금연 며칠? -->
+        <h2>금연<span id="day-count">00</span>일째</h2>
 
-        <div class="img-row">
-          <img class ="female" src="images/hyewon.jpg" width="148">
-          <img src="images/dot.png" width="8">
-          <img src="images/dot.png" width="8">
-          <img src="images/heart.png" width="16">
-          <img src="images/dot.png" width="8">
-          <img src="images/dot.png" width="8">
-          <img class = "male" src="images/sheongho.jpg" width="148">
-        </div>
 
         <!-- 만나기 시작한 날짜 -->
         <div class="date-row">
@@ -32,16 +23,38 @@
           <input type="date" name="start" id="start">
         </div>
 
+                <!-- 며칠됐는지 계산하기! -->
+  <button id="calculate">결과 보기</button>
+ </div>
+</div>
+
+        <div class="main">
+          <div class="container">
+            <!-- 중도 포기 며칠? -->
+            <h2>포기 후 금연<span id="day-count1">00</span>일째</h2>
+
+<!--중도 포기 날짜-->
+        <div class="date-row">
+          <label for="start1">중도포기일</label>
+          <input type="date" name="start1" id="start1">
+        </div>
+
+
         <!-- 며칠됐는지 계산하기! -->
-        <button id="calculate">결과 보기</button>
-      </div>
-    </div>
+
+
+    <button id="calculate1">중도 포기 이후</button>
+  </div>
+</div>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+
+
     <script>
+
     // 알림
       $('#calculate').on('click', calcu)
       function calcu(){
@@ -56,6 +69,31 @@
         $('#day-count').text(duringdate);
         }
       }
+      </script>
+
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+
+      <script>
+      // 중도 포기 후 알
+        $('#calculate1').on('click', calcu1)
+        function calcu1(){
+          let empty1 = $('#start1').val()
+          let nowdate1 = new Date();
+          let startdate1 = new Date($('#start1').val());
+          let duringdate1 = Math.round((nowdate1 - startdate1) / 1000 / 60 / 60 / 24 + 1)
+          if(empty1 == 0 ){
+          alert('시작 날짜를 입력해 주세요!')
+          }
+          else{
+          $('#day-count1').text(duringdate1);
+          }
+        }
+
+
 
       // 지속날짜
 
