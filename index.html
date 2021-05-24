@@ -25,14 +25,11 @@
 
                 <!-- 며칠됐는지 계산하기! -->
   <button id="calculate">결과 보기</button>
- </div>
-</div>
 
-        <div class="main">
-          <div class="container">
+
             <!-- 중도 포기 며칠? -->
-            <h2>포기 후 금연<span id="day-count1">00</span>일째</h2>
-
+            <h2>중도 포기 후 재도전 <span id="day-count1">00</span>일째</h2>
+               <h3>-중도 포기 전 <span id="day-count2">00</span>일 동안 성공함-</h3>
 <!--중도 포기 날짜-->
         <div class="date-row">
           <label for="start1">중도포기일</label>
@@ -71,11 +68,6 @@
       }
       </script>
 
-      <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-
 
       <script>
       // 중도 포기 후 알
@@ -93,6 +85,16 @@
           }
         }
 
+
+        $('#calculate1').on('click', calcu2)
+        function calcu2(){
+          let startdate = new Date($('#start').val());
+          let startdate1 = new Date($('#start1').val());
+          let duringdate1 = Math.round((startdate1 - startdate) / 1000 / 60 / 60 / 24)
+
+          $('#day-count2').text(duringdate1);
+
+        }
 
 
       // 지속날짜
